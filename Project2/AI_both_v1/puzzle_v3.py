@@ -8,7 +8,7 @@ import sys
 sys.setrecursionlimit(10**6)
 
 #import AI_heuristics as AI
-import AI_expectimax_SOLUTION as AI
+import AI_expectimax as AI
 #import AI_Play_both as AI
 
 """Function that generates a random position withing the grid"""
@@ -117,7 +117,7 @@ class GameGrid(Frame):
                 if self.draw:
                      self.update()
 
-        if not self.game_over:  # If the game isn't over
+        if not self.game_over: 
             self.update_view()
 
 
@@ -135,7 +135,7 @@ def main():
 
     sim_results = pd.DataFrame(columns=['Game Parameters', 'Score'])
   
-    for heuristic in ["empty_tile_heuristics"]:
+    for heuristic in ["Corner_heuristics"]:
 
         for i in range(0, sims):
             print(i)
